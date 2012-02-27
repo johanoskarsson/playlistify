@@ -1,0 +1,5 @@
+source "http://rubygems.org"
+gem "sinatra"
+gem "rdio"
+gem "omniauth-rdio"
+gem "lastfm"

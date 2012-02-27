@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Playlistify</title>
+    <meta name="description" content="Make playlists out of anything!">
+    <meta name="author" content="Johan Oskarsson">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/css/docs.css" rel="stylesheet">
+    <link href="../assets/css/bootstrap-responsive.min.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+   <div class="container">
+     <header id="masthead" class="jumbotron masthead">
+       <div class="inner">
+         <a class="noblue" href="/"><h1>Playlistify</h1></a>
+         <p>Make playlists out of anything!</p>
+       </div>
+     </header>
+             
+      <%= yield %>
+      <div class="marketing hide" id="error-msg">
+        <h1>Oh noes!</h1>
+        <div class="row">
+          <div class="span4 offset4">
+            <div class="alert alert-error">
+              <div id="the-error"><%= @error %><div>
+            </div>
+          </div>
+        </div><!--/row-->
+      </div>
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/application.js"></script>
+  </body>
+</html>

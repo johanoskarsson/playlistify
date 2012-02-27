@@ -1,0 +1,204 @@
+.noblue {
+  color: #333333;
+}
+
+.noblue:hover {
+  text-decoration: none;
+}
+
+
+/* Body and structure
+-------------------------------------------------- */
+body {
+  position: relative;
+  padding-top: 90px;
+  background-color: #fff;
+  background-repeat: repeat-x;
+  background-position: 0 40px;
+}
+
+/* Space out sub-sections more
+-------------------------------------------------- */
+section {
+  padding-top: 60px;
+}
+
+/* Jumbotrons
+-------------------------------------------------- */
+.jumbotron {
+  position: relative;
+}
+.jumbotron h1 {
+  margin-bottom: 9px;
+  font-size: 81px;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+.jumbotron p {
+  margin-bottom: 18px;
+  font-weight: 300;
+}
+.jumbotron .btn-large {
+  font-size: 20px;
+  font-weight: normal;
+  padding: 14px 24px;
+  margin-right: 10px;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+}
+
+/* Masthead (docs home) */
+.masthead {
+  padding-top: 36px;
+  margin-bottom: 72px;
+}
+.masthead h1,
+.masthead p {
+  text-align: center;
+}
+.masthead h1 {
+  margin-bottom: 18px;
+}
+.masthead p {
+  margin-left: 5%;
+  margin-right: 5%;
+  font-size: 30px;
+  line-height: 36px;
+}
+
+
+/* Specific jumbotrons
+------------------------- */
+/* supporting docs pages */
+.subhead {
+  padding-bottom: 0;
+  margin-bottom: 9px;
+}
+.subhead h1 {
+  font-size: 54px;
+}
+
+
+/* Marketing section of Overview
+-------------------------------------------------- */
+.marketing .row {
+  margin-bottom: 9px;
+}
+.marketing h1 {
+  margin: 36px 0 27px;
+  font-size: 40px;
+  font-weight: 300;
+  text-align: center;
+}
+.marketing h2,
+.marketing h3 {
+  font-weight: 300;
+}
+.marketing h2 {
+  font-size: 22px;
+}
+.marketing p {
+  margin-right: 10px;
+}
+.marketing .bs-icon {
+  float: left;
+  margin: 7px 10px 0 0;
+  opacity: .8;
+}
+.marketing .small-bs-icon {
+  float: left;
+  margin: 4px 5px 0 0;
+}
+
+
+
+/* Footer
+-------------------------------------------------- */
+.footer {
+  margin-top: 45px;
+  padding: 35px 0 36px;
+  border-top: 1px solid #e5e5e5;
+}
+.footer p {
+  margin-bottom: 0;
+  color: #555;
+}
+
+
+
+
+
+
+/* Responsive Docs
+-------------------------------------------------- */
+@media (max-width: 480px) {
+
+  /* Reduce padding above jumbotron */
+  body {
+    padding-top: 70px;
+  }
+
+  /* Change up some type stuff */
+  h2 {
+    margin-top: 27px;
+  }
+  h2 small {
+    display: block;
+    line-height: 18px;
+  }
+  h3 {
+    margin-top: 18px;
+  }
+
+  /* Adjust the jumbotron */
+  .jumbotron h1,
+  .jumbotron p {
+    text-align: center;
+    margin-right: 0;
+  }
+  .jumbotron h1 {
+    font-size: 45px;
+    margin-right: 0;
+  }
+  .jumbotron p {
+    margin-right: 0;
+    margin-left: 0;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .jumbotron .btn {
+    display: block;
+    font-size: 18px;
+    padding: 10px 14px;
+    margin: 0 auto 10px;
+  }
+  /* Masthead (home page jumbotron) */
+  .masthead {
+    padding-top: 0;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  /* Remove any padding from the body */
+  body {
+    padding-top: 0;
+  }
+
+}
+
+
+@media (min-width: 480px) and (max-width: 768px) {
+
+  /* Scale down the jumbotron content */
+  .jumbotron h1 {
+    font-size: 54px;
+  }
+  .jumbotron p {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+}

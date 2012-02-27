@@ -1,0 +1,133 @@
+<!-- this is the first thing shown on the page, for picking a source of the tracks -->
+<div class="marketing" id="select-source">
+  <h1>Select your source</h1>
+  <div class="row">
+    <a class="noblue" data-toggle="modal" href="#lastfm-loved-source" >
+      <div class="span4 offset2">
+        <img class="bs-icon" src="../assets/img/40x40_lastfm.png">
+        <h2>Last.fm loved tracks</h2>
+        <p>Pull in the tracks that a user have meticulously marked as 'loved' on Last.fm.</p>
+      </div>
+    </a>
+    <a class="noblue" data-toggle="modal" href="#lastfm-7day-source" >    
+      <div class="span4">  
+        <img class="bs-icon" src="../assets/img/40x40_lastfm.png">
+        <h2>Last.fm 7 day chart</h2>
+        <p>Want to get a snapshot of what a Last.fm user is currently into? Pull in their 7 day chart.</p>
+      </div>
+    </a>
+  </div><!--/row-->
+  <div class="row">
+    <a class="noblue" data-toggle="modal" href="#hypem-loved-source" >          
+      <div class="span4 offset2">
+        <img class="bs-icon" src="../assets/img/40x40_hypem-gray.png">
+        <h2 style="text-decoration: line-through;">Hype machine loved tracks</h2>
+        <p style="text-decoration: line-through;">Liberate the loved tracks from the hype machine!</p>
+      </div>    
+    </a>
+  </div><!--/row-->    
+</div>
+
+<!-- now we're asking for the lastfm username to create the playlist from -->
+<div class="modal hide fade" id="lastfm-loved-source">
+  <div class="modal-header">
+    <a class="close" data-dismiss="modal">×</a>
+    <h3>Tell us the username!</h3>
+  </div>
+  
+  <form class="form-horizontal" id="lastfm-loved-form">
+    <fieldset>
+      <div class="modal-body">  
+        <div class="control-group">
+          <label class="control-label" for="lastfm-loved-username">Last.fm username</label>
+          <div class="controls">
+            <input type="text" class="input-xlarge" id="lastfm-loved-username">
+            <p class="help-block">Who do you want to fetch the loved tracks from?'</p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button data-dismiss="modal" type="submit" id="lastfm-loved-save" class="btn btn-primary">Save changes</button>
+        <button data-dismiss="modal" class="btn">Close</button>
+      </div>    
+    </fieldset>
+  </form>  
+</div>
+
+<!-- now we're asking for the lastfm username to create the playlist from -->
+<div class="modal hide fade" id="lastfm-7day-source">
+  <div class="modal-header">
+    <a class="close" data-dismiss="modal">×</a>
+    <h3>Tell us the username!</h3>
+  </div>
+  
+  <form class="form-horizontal" id="lastfm-7day-form">
+    <fieldset>
+      <div class="modal-body">  
+        <div class="control-group">
+          <label class="control-label" for="lastfm-7day-username">Last.fm username</label>
+          <div class="controls">
+            <input type="text" class="input-xlarge" id="lastfm-7day-username">
+            <p class="help-block">Who do you want to fetch the 7 day track chart from?</p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button data-dismiss="modal" type="submit" id="lastfm-7day-save" class="btn btn-primary">Save changes</button>
+        <button data-dismiss="modal" class="btn">Close</button>
+      </div>    
+    </fieldset>
+  </form>  
+</div>
+
+<div class="marketing hide" id="fetching-tracks">
+  <h1>Fetching your tracks...</h1>
+  <div class="row">
+    <div class="span4 offset4">
+      <div class="progress progress-striped active">
+        <div class="bar" style="width: 100%;"></div>
+      </div>
+    </div>
+  </div>  
+</div>
+
+<!-- select where to create the playlist -->
+<div class="marketing hide" id="select-target">
+  <h1>Select your target</h1>
+  <div class="row">
+    <a class="noblue" data-toggle="modal" href="#rdio-target" >    
+      <div class="span4 offset2">
+        <img class="bs-icon" src="../assets/img/40x40_rdio.png">
+        <h2>Rdio playlist</h2>
+        <p>Creates and fills up an Rdio playlist with the songs from the source.</p>
+      </div>
+    </a>
+    <div class="span4">
+      <img class="bs-icon" src="../assets/img/40x40_spotify-gray.png">
+      <h2 style="text-decoration: line-through;">Spotify playlist</h2>
+      <p style="text-decoration: line-through;">Pulls the songs into a playlist on your Spotify account.</p>
+    </div>
+  </div><!--/row-->
+  
+  <div class="row">
+    <div class="span4 offset2">
+      <img class="bs-icon" src="../assets/img/40x40_8tracks-gray.png">
+      <h2 style="text-decoration: line-through;">8tracks playlist</h2>
+      <p style="text-decoration: line-through;">Put the songs into an 8tracks playlist. So there.</p>
+    </div>
+  </div><!--/row-->    
+</div>
+
+<div class="modal hide fade" id="rdio-target">
+  <div class="modal-header">
+    <a class="close" data-dismiss="modal">×</a>
+    <h3>Brace yourselves!</h3>
+  </div>
+  <div class="modal-body">
+    We're going to ship you off to Rdio for a second. They'll ask you to authenticate so we can create that playlist for you.
+  </div>
+  <div class="modal-footer">
+    <button data-dismiss="modal" type="submit" id="rdio-target-ok" class="btn btn-primary">Do it!</button>
+    <button data-dismiss="modal" class="btn">Close</button>
+  </div>
+</div>
