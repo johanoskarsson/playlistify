@@ -10,6 +10,7 @@ class RdioTarget
     
   def add_tracks(tracks=[], user)
     Rdio::init_with_token(@token)
+    Rdio::symbols_to_types[:owner] = nil
     # TODO get the playlist, if it exists just add the tracks
     r_tracks = tracks.map { |track| Rdio::Track.search(track[:artist] + " " + track[:track],nil,['name']).first }
     if (!r_tracks.empty?)
