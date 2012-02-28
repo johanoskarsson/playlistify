@@ -11,7 +11,7 @@
 -------------------------------------------------- */
 body {
   position: relative;
-  padding-top: 90px;
+  padding-top: 60px;
   background-color: #fff;
   background-repeat: repeat-x;
   background-position: 0 40px;
@@ -65,18 +65,6 @@ section {
   margin-right: 5%;
   font-size: 30px;
   line-height: 36px;
-}
-
-
-/* Specific jumbotrons
-------------------------- */
-/* supporting docs pages */
-.subhead {
-  padding-bottom: 0;
-  margin-bottom: 9px;
-}
-.subhead h1 {
-  font-size: 54px;
 }
 
 
@@ -179,16 +167,12 @@ section {
   }
 }
 
-
-@media (max-width: 768px) {
-
-  /* Remove any padding from the body */
-  body {
-    padding-top: 0;
-  }
-
+.bottombar {
+    position: fixed;
+    bottom: 0;
+    left: 10px;
+    right: 10px;
 }
-
 
 @media (min-width: 480px) and (max-width: 768px) {
 
