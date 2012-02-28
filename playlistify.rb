@@ -29,7 +29,7 @@ get '/get_tracks.json' do
     end
     session[:tracks] = tracks
     tracks.to_json
-  rescue Exception => e
+  rescue => e
     puts e.backtrace
     [500, '{"error" : "Failed to playlistify: ' + e.to_s + '"}']
   end
@@ -44,7 +44,7 @@ get '/add_to_playlist.json' do
     # TODO right now we just pick this target, does not matter what the user selects
     tracks = session[:tracks]  
     if (tracks == nil || tracks.empty?)
-      '{"error" : "There were no tracks to add to the playlist"}'
+      [500,'{"error" : "There were no tracks to add to the playlist"}']
     else
       target = RdioTarget.new(session[:access_token])
       target.add_tracks(tracks, session[:rdiouid])
@@ -53,7 +53,7 @@ get '/add_to_playlist.json' do
   rescue NoMethodError => e
     puts e # that rdio library bug
     '{"complete" : "true"}'
-  rescue Exception => e
+  rescue => e
     puts e.backtrace
     [500, '{"error" : "Failed to playlistify: ' + e.to_s + '"}']
   end
