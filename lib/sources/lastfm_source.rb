@@ -21,7 +21,7 @@ class LastfmSource
     when :loved_tracks
       lastfm.user.get_loved_tracks(user)
     end
-      
+    
     tracks.map {|track| {:track => track["name"], :artist=>track["artist"]["name"]}}
   end
 end

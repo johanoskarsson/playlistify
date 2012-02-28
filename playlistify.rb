@@ -30,7 +30,8 @@ get '/get_tracks.json' do
     session[:tracks] = tracks
     tracks.to_json
   rescue Exception => e
-    '{"error" : "Failed to playlistify: ' + e.to_s + '"}'
+    puts e.backtrace
+    [500, '{"error" : "Failed to playlistify: ' + e.to_s + '"}']
   end
 end
 
@@ -54,7 +55,7 @@ get '/add_to_playlist.json' do
     '{"complete" : "true"}'
   rescue Exception => e
     puts e.backtrace
-    '{"error" : "Failed to playlistify: ' + e.to_s + '"}'
+    [500, '{"error" : "Failed to playlistify: ' + e.to_s + '"}']
   end
 end
 

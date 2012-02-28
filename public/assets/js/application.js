@@ -44,19 +44,31 @@ $('#rdio-target').on('shown', function () {
 // TODO not sure how to execute this code only on the right page. this will do
 $(document).ready(function () {
   if($('#working-on-it').is(':visible')) {
-    $.getJSON("/add_to_playlist.json",  
-      function(data) {  
+    $.ajax({
+      url: "/add_to_playlist.json",
+      dataType: "json",
+      statusCode: {
+        500: function(data) {
+          $('#the-error').html(data)
+          $('#error-msg').show()
+        }
+      },
+      error: function(data){
+        $('#the-error').html(data)
+        $('#error-msg').show()
+      },
+      success: function(data){
         $('#working-on-it').hide()
 
-        if(data["complete"] == "true") {
+        if(data["complete"] === "true") {
           $('#masthead').hide()
           $('#done').show()
         } else {
           $('#the-error').html(data["error"])
           $('#error-msg').show()
         }
-      }  
-    );    
+      }
+    });
   }
 });
 
